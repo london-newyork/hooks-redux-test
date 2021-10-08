@@ -1,6 +1,7 @@
 import React, { useReducer,useState } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reducer from '../reducers'
+import Event from "./Event";
 
 const MakeForm = () => {
     const [state, dispatch] = useReducer(reducer, [])
@@ -48,6 +49,7 @@ const MakeForm = () => {
                     </tr>
                     </thead>
                     <tbody>
+                        {state.map ((event, index) => (<Event key = {index} event={event} dispatch={dispatch}/>))}
                     </tbody>
                 </table>
             </div>
