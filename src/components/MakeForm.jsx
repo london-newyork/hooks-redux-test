@@ -6,15 +6,12 @@ import Events from "./Events";
 
 const MakeForm = () => {
     const [state, dispatch] = useReducer(reducer, [])
-    console.log(state, 'in App.js')
-    return (
-        <div>
-             <div className="container-fluid">
-                <EventForm state={state} dispatch={dispatch}/>
-                <Events state={state} dispatch={dispatch}/>
 
-            </div>
-        </div>
+    return (
+        <div className="container-fluid">
+            <EventForm state={state} dispatch={dispatch}/>
+            <Events state={state} dispatch={dispatch}/>
+         </div>
     )
 }
 
