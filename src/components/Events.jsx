@@ -17,7 +17,7 @@ const Events = () => {
                     </tr>
                     </thead>
                     <tbody>
-                        {state.map ((event, index) => (<Event key = {index} event={event}/>))}
+                        {state.events.map ((event, index) => (<Event key = {index} event={event}/>))}
                         {/* dispatchはuseContext経由で直接渡ってくるため書かない */}
                     </tbody>
                 </table>
