@@ -7,7 +7,8 @@ import Events from "./Events";
 
 const MakeForm = () => {
     const initialState = {
-        events: []
+        events: [],
+        operationLogs: [] 
     }
     const [ state, dispatch ] = useReducer(reducer, initialState)
 
